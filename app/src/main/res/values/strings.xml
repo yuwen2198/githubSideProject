@@ -5,5 +5,6 @@
     <string name="delete_id_error">刪除 github id 失敗</string>
     <string name="error_id">錯誤ID或找不到該ID資料</string>
     <string name="empty_id">請稍後</string>
+    <string name="get_collaborators_error">獲取錯誤或此token無法獲得該ID合作者</string>
 
 </resources>

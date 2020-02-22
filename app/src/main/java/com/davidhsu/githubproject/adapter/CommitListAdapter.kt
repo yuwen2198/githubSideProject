@@ -20,7 +20,6 @@ class CommitListAdapter(private var items: List<UserRepoCommit>) : RecyclerView.
     override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        LogUtil.i("name = ${items[position].commit.message}")
         holder.itemView.commitItem.text = items[position].commit.message
     }
 

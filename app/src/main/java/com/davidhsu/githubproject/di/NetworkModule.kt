@@ -55,7 +55,7 @@ class NetworkModuleClass : NetworkModuleClassInterface {
         }
     override val apiRetrofit: Retrofit
         get() {
-            val githubBaseUrl = "https://api.github.com/"
+            val githubBaseUrl = PrefsConst.ApiConst.BASE_URL
             return Retrofit.Builder()
                 .baseUrl(githubBaseUrl)
                 .client(apiOkHttpClient)

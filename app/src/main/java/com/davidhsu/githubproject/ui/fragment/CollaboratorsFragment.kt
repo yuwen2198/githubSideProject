@@ -50,8 +50,7 @@ class CollaboratorsFragment: Fragment() {
         })
 
         viewModel.collaboratorsError.observe(viewLifecycleOwner, Observer {
-            LogUtil.i("repo Collaborators list error")
-            Toast.makeText(context, "獲取錯誤或此token無法獲得該ID合作者", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, getString(R.string.get_collaborators_error), Toast.LENGTH_LONG).show()
         })
 
     }

@@ -15,6 +15,7 @@ object PrefsConst {
     }
 
     object ApiConst {
+        const val BASE_URL = "https://api.github.com/"
         const val MAX_PARALLEL_REQUESTS = 64
         const val MAX_PARALLEL_REQUESTS_PER_HOST = 16
         const val READ_TIMEOUT_SECONDS = 15L
