@@ -15,6 +15,8 @@ class RepoInfoViewModel(private val model: RepoInfoModule): AutoDisposeViewModel
     val getRepoCommit: LiveData<List<UserRepoCommit>> = _getRepoCommit
     private val _getRepoCollaborators = MutableLiveData<List<RepoCollaboratorsResponse>>()
     val getRepoCollaborators: LiveData<List<RepoCollaboratorsResponse>> = _getRepoCollaborators
+    private val _CollaboratorsError = MutableLiveData<Boolean>()
+    val CollaboratorsError: LiveData<Boolean> = _CollaboratorsError
 
     fun getRepoCommitData() {
         val id = model.getUserID()
@@ -34,6 +36,7 @@ class RepoInfoViewModel(private val model: RepoInfoModule): AutoDisposeViewModel
         model.getRepoCollaborators(id, repo).subscribe({
             _getRepoCollaborators.postValue(it)
         },{
+            _CollaboratorsError.postValue(true)
             it.report()
         }).addTo(compositeDisposable)
 

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,6 +48,12 @@ class CollaboratorsFragment: Fragment() {
             LogUtil.i("repo Collaborators list size = ${it.size}")
             collaboratorsDataAdapter.setData(it)
         })
+
+        viewModel.CollaboratorsError.observe(viewLifecycleOwner, Observer {
+            LogUtil.i("repo Collaborators list error")
+            Toast.makeText(context, "獲取錯誤或此token無法獲得該ID合作者", Toast.LENGTH_LONG).show()
+        })
+
     }
 
 }
