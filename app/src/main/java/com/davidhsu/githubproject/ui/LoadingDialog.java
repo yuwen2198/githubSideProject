@@ -1,4 +1,4 @@
-package com.davidhsu.githubproject;
+package com.davidhsu.githubproject.ui;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import com.davidhsu.githubproject.R;
 
 public class LoadingDialog extends Dialog {
 

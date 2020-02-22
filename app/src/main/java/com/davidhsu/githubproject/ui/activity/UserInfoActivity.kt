@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.davidhsu.githubproject.LoadingDialog
+import com.davidhsu.githubproject.ui.LoadingDialog
 import com.davidhsu.githubproject.LogUtil
 import com.davidhsu.githubproject.R
 import com.davidhsu.githubproject.adapter.RepoListAdapter
@@ -29,7 +29,11 @@ class UserInfoActivity : AppCompatActivity() {
     }
 
     private val loadingDialog : LoadingDialog by lazy {
-        LoadingDialog(this, getString(R.string.loading), R.drawable.ic_dialog_loading)
+        LoadingDialog(
+            this,
+            getString(R.string.loading),
+            R.drawable.ic_dialog_loading
+        )
     }
 
     private val itemClick = object : RepoItemClickListener{
