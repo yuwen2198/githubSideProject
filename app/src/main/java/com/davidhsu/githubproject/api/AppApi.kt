@@ -23,6 +23,6 @@ interface AppApi {
     @GET("repos/{username}/{repo}/collaborators")
     fun getUserRepoCollaborators(@Path("username") username: String,
                                  @Path("repo") repoName: String,
-                                 @Query("access_token") client: String = "a75ab4ec7ec9d5dafcafafe15f7b1ba12a8ed83b")
+                                 @Query("access_token") client: String = "bd37c611becfe91b2e5c2c5db95114c861933392")
             : Single<List<RepoCollaboratorsResponse>>
 }
